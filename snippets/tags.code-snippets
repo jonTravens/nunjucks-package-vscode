@@ -1,0 +1,141 @@
+{
+    "Nunjucks tag": {
+        "prefix": ["njk", "tag"],
+        "body": "{% $1 %}",
+        "description": "A nunjucks template block."
+    },
+
+    "Block": {
+        "prefix": "block",
+        "body": "{% block ${1:name} %}\n\t$2\n{% endblock %}",
+        "description": "Block defines a section on the template and identifies it with a name. This is used by template inheritance. Base templates can specify blocks and child templates can override them with new content."
+    },
+
+    "Extends": {
+        "prefix": "extends",
+        "body": "{% extends \"${1:template}\" %}$2",
+        "description": "Extends is used to specify template inheritance. The specified template is used as a base template."
+    },
+
+    "Include": {
+        "prefix": "include",
+        "body": "{% include \"${1:template}\" ${2:ignore missing} %}$3",
+        "description": "Include pulls in other templates in place. It\"s useful when you need to share smaller chunks across several templates that already inherit other templates."
+    },
+
+
+    "If": {
+        "prefix": "if",
+        "body": "{% if ${1:condition} %}\n\t$2\n{% endif %}\n$0",
+        "description": "If tests a condition and lets you selectively display content. It behaves exactly as javascript\"s if behaves."
+    },
+    "If Else": {
+        "prefix": "ife",
+        "body": "{% if ${1:condition} %}\n\t$2\n{% else %}\n\t$3\n{% endif %}\n$0",
+        "description": "It creates an if and else block."
+    },
+    "If Elif": {
+        "prefix": "ifel",
+        "body": "{% if ${1:condition} %}\n\t$2\n{% elif ${3:condition} %}\n\t$4\n{% else %}\n\t$5\n{% endif %}\n$0",
+        "description": "Alternate condition with the if block"
+    },
+    "If Elif Else": {
+		"prefix": "ifelelse",
+		"body": "{% if ${1:condition} %}\n\t${2:then}\n{% elif ${3:condition} %}\n\t${4:then}\n{% else %}\n\t${5:then}\n{% endif %}\n$0",
+		"description": "Creates an If / Elif / Else block"
+	},
+    "Elif": {
+        "prefix": "elif",
+        "body": "{% elif ${1:condition} %}\n\t$0",
+        "description": "Adds an alternate condition in the if block"
+    },
+    "Else": {
+        "prefix": "else",
+        "body": "{% else ${1:condition} %}\n\t$2\n{% endif %}\n$0",
+        "description": "Adds an else in the if block"
+    },
+    "End": {
+        "prefix": "end",
+        "body": "{% endif %}",
+        "description": "And an end tag for an If block"
+    },
+
+	"For": {
+        "prefix": "for",
+        "body": "{% for ${1:item} in ${2:sequence} %}\n\t$3\n{% endfor %}",
+        "description": "For iterates over arrays and dictionaries."
+    },
+	"For index / value": {
+        "prefix": "fori",
+        "body": "{% for ${1:key}, ${2:value} in ${3:sequence} %}\n\t$4\n{% endfor %}",
+        "description": "For iterates over arrays and dictionaries."
+    },
+
+    "Set": {
+        "prefix": "set",
+        "body": "{% set ${1:var} = ${2:value} %}$0",
+        "description": "set lets you create/modify a variable."
+    },
+    "Set oject": {
+        "prefix": "seto",
+        "body": "{% set ${1:var} = {\n\t${2:value}: $3\n}%}$0",
+        "description": "Lets you create an object."
+    },
+    "Set some content": {
+		"prefix": "setc",
+		"body": "{% set $1 %}\n\t$2\n{% endset %}$0",
+		"description": "Nunjucks set content function"
+	},
+
+    "Macro": {
+        "prefix": "macro",
+        "body": "{% macro ${1:name}(${2:args}) %}\n\t$3\n{% endmacro %}",
+        "description": "Macro allows you to define reusable chunks of content. It is similar to a function in a programming language."
+    },
+    "Caller": {
+        "prefix": "caller",
+        "body": "{{ caller() }}",
+        "description": "Adds a \"caller\" block. Used in a macro that will be called using the call function."
+    },
+    "Call": {
+        "prefix": "call",
+        "body": "{% call ${1:macro} %}\n\t$2\n{% endcall %}",
+        "description": "A call block enables you to call a macro with all the text inside the tag. This is helpful if you want to pass a lot of content into a macro. The content is available inside the macro as caller()."
+    },
+
+    "Import": {
+        "prefix": "import",
+        "body": "{% import \"${1:template}\" as ${2:var} ${3:with context }%}\n$0",
+        "description": "Import loads a different template and allows you to access its exported values. Macros and top-level assignments (done with set) are exported from templates, allowing you to access them in a different template. By adding with context to the end of an import directive, the imported template is processed with the current context."
+    },
+
+    "Import from": {
+        "prefix": "from",
+        "body": "{% from \"${1:template}\" import ${2:macro} as ${3:var} ${3:with context }%}\n$0",
+        "description": "Import loads a different template and allows you to access its exported values. Macros and top-level assignments (done with set) are exported from templates, allowing you to access them in a different template. By adding with context to the end of an import directive, the imported template is processed with the current context."
+    },
+
+    "Raw": {
+        "prefix": "raw",
+        "body": "{% raw %}\n\t$1\n{% endraw %}",
+        "description": "If you want to output any of the special nunjucks tags like {{, you can use raw and anything inside of it will be output as plain text."
+    },
+
+    "Verbatim": {
+        "prefix": "verbatim",
+        "body": "{% verbatim %}\n\t$1\n{% endverbatim %}",
+        "description": "{% verbatim %} has identical behavior as {% raw %}. It is added for compatibility with the Twig verbatim tag."
+    },
+
+    "Async Each": {
+        "prefix": "asyncEach",
+        "body": "{% asyncEach ${1:item} in ${2:sequence} %}\n\t$3\n{% endeach %}",
+        "description": "asyncEach is an asynchronous version of for. You only need this if you are using a custom template loader that is asynchronous; otherwise you will never need it. Async filters and extensions also need this, but internally loops are automatically converted into asyncEach if any async filters and extensions are used within the loop."
+    },
+
+    "Async All": {
+        "prefix": "asyncAll",
+        "body": "{% asyncAll ${1:item} in ${2:sequence} %}\n\t$3\n{% endeach %}",
+        "description": "asyncAll is similar to asyncEach, except it renders all the items in parallel, preserving the order of the items. This is only helpful if you are using asynchronous filters, extensions, or loaders. Otherwise you should never use this."
+    }
+}

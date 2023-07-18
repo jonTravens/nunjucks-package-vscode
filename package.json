@@ -1,0 +1,59 @@
+{
+    "name": "nunjucks-package-for-vscode",
+    "displayName": "nunjucks-package-for-vscode",
+    "description": "A complete suite of snippets to use Nunjucks API",
+    "icon": "./images/nunjucks.png",
+    "galleryBanner": {
+        "color": "#203510",
+        "theme": "dark"
+    },
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "nunjucks",
+                "aliases": [
+                    "Nunjucks",
+                    "nunjucks"
+                ],
+                "extensions": [
+                    ".nunjucks",
+                    ".nj",
+                    ".njk"
+                ],
+                "configuration": "./languages/nunjucks.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "nunjucks",
+                "scopeName": "text.html.nunjucks",
+                "path": "./syntaxes/nunjucks.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "nunjucks",
+                "path": "./snippets/builtin-filters.code-snippets"
+            },
+            {
+                "language": "nunjucks",
+                "path": "./snippets/misc.code-snippets"
+            },
+            {
+                "language": "nunjucks",
+                "path": "./snippets/global-functions.code-snippets"
+            },
+            {
+                "language": "nunjucks",
+                "path": "./snippets/tags.code-snippets"
+            }
+        ]
+    }
+}

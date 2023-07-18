@@ -1,0 +1,26 @@
+{
+    "Range function": {
+        "prefix": "rangef",
+        "body": "range(${1:start}, ${2:stop}",
+        "description": "If you need to iterate over a fixed set of numbers, range generates the set for you. The numbers begin at start (default 0) and increment by step (default 1) until it reaches stop, not including it.."
+    },
+    "Range step function": {
+        "prefix": "rangef",
+        "body": "range(${1:start}, ${2:stop}, ${3:step}",
+        "description": "If you need to iterate over a fixed set of numbers, range generates the set for you. The numbers begin at start (default 0) and increment by step (default 1) until it reaches stop, not including it."
+    },
+
+    "Cycler function": {
+        "prefix": "cyclf",
+        "body": "cycler(\"${1:firstValue}\", \"${2:stop}\"$0)",
+        "description": "An easy way to rotate through several values is to use cycler, which takes any number of arguments and cycles through them."
+    },
+
+    "Joiner function": {
+        "prefix": "joinerf",
+        "body": "joiner(\"${1:,}\")",
+        "description": "An easy way to rotate through several values is to use cycler, which takes any number of arguments and cycles through them."
+    },
+
+
+}

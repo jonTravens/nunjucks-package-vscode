@@ -1,0 +1,290 @@
+{
+    "Filter": {
+        "prefix": "pipe",
+        "body": "| ${1:filter}",
+        "description": "You can pass filters from the variable directly e.g. {{ foo | escape }}"
+    },
+    "Filter block": {
+        "prefix": "filter",
+        "body": "{% filter ${1:filter} %}\n\t$2\n{% endfilter %}",
+        "description": "A filter block allows you to call a filter with the contents of the block. Instead passing a value with the | syntax, the render contents from the block will be passed."
+    },
+
+    "Default Filter": {
+		"prefix": "defaultf",
+		"body": "| default(${1:value}, ${2:fallback})$0",
+		"description": "Filtre pour ajouter une valeur défaut"
+	},
+
+    "Abs Filter": {
+		"prefix": "absf",
+		"body": "| abs$0",
+		"description": "Return the absolute value of the argument."
+	},
+
+    "Batch Filter": {
+		"prefix": "batchf",
+		"body": "| batch($0)",
+		"description": "Return a list of lists with the given number of items."
+	},
+
+    "Capitalize Filter": {
+		"prefix": "capf",
+		"body": "| capitalize($0)",
+		"description": "Make the first letter uppercase, the rest lower case."
+	},
+
+    "Dictsort Filter": {
+		"prefix": "dictf",
+		"body": "| dictsort",
+		"description": "Sort a dict and yield (key, value) pairs."
+	},
+
+    "Dump Filter": {
+		"prefix": "dumpf",
+		"body": "| dump",
+		"description": "Call JSON.stringify on an object and dump the result into the template. Useful for debugging."
+	},
+
+    "Escape Filter": {
+		"prefix": "escf",
+		"body": "| escape",
+		"description": "Convert the characters &, <, >, ‘, and ” in strings to HTML-safe sequences. Use this if you need to display text that might contain such characters in HTML. Marks return value as markup string."
+	},
+
+    "First Filter": {
+		"prefix": "firstf",
+		"body": "| first",
+		"description": "Get the first item in an array or the first letter if it's a string."
+	},
+
+    "Float Filter": {
+		"prefix": "floatf",
+		"body": "| float",
+		"description": "Convert a value into a floating point number. If the conversion fails 0.0 is returned. This default can be overridden by using the first parameter."
+	},
+
+    "Force Escape Filter": {
+		"prefix": "forcescf",
+		"body": "| forceescape",
+		"description": "Enforce HTML escaping. This will probably double escape variables."
+	},
+
+    "GroupeBy Filter": {
+		"prefix": "groupf",
+		"body": "| groupeby",
+		"description": "Group a sequence of objects by a common attribute. Attribute can use dot notation to use nested attribute, like date.year."
+	},
+
+    "Indent Filter": {
+		"prefix": "indf",
+		"body": "| indent(${1:4})",
+		"description": "Indent a string using spaces. Default behaviour is not to indent the first line. Default indentation is 4 spaces."
+	},
+
+    "Int Filter": {
+		"prefix": "intf",
+		"body": "| int",
+		"description": "Convert the value into an integer. If the conversion fails 0 is returned."
+	},
+
+    "Join Filter": {
+		"prefix": "joinf",
+		"body": "| join(${1:separator})",
+		"description": "Return a string which is the concatenation of the strings in a sequence. The separator between elements is an empty string by default which can be defined with an optional parameter."
+	},
+    "Join array values Filter": {
+		"prefix": "joinaf",
+		"body": "| join(${1:separator}, ${2:key})",
+		"description": "Return a string which is the concatenation of the strings in a sequence based on the key provided. The separator between elements is an empty string by default which can be defined with an optional parameter."
+	},
+
+    "Last Filter": {
+		"prefix": "lastf",
+		"body": "| last",
+		"description": "Get the last item in an array or the last letter if it's a string."
+	},
+
+    "Length Filter": {
+		"prefix": "lf",
+		"body": "| length",
+		"description": "Return the length of an array or string, or the number of keys in an object."
+	},
+
+    "List Filter": {
+		"prefix": "listf",
+		"body": "| list",
+		"description": "Convert the value into a list. If it was a string the returned list will be a list of characters."
+	},
+
+    "Lower Filter": {
+		"prefix": "lowf",
+		"body": "| lower",
+		"description": "Convert string to all lower case."
+	},
+
+    "nl2br Filter": {
+		"prefix": "nlf",
+		"body": "| nl2br",
+		"description": "Replace new lines with <br /> HTML elements."
+	},
+
+    "Random Filter": {
+		"prefix": "randf",
+		"body": "| random",
+		"description": "Select a random value from an array. (This will change everytime the page is refreshed)."
+	},
+
+    "Reject Filter": {
+		"prefix": "rejf",
+		"body": "| reject()",
+		"description": "Filters a sequence of objects by applying a test to each object, and rejecting the objects with the test succeeding. If no test is specified, each object will be evaluated as a boolean."
+	},
+    "Reject odd/even Filter": {
+		"prefix": "rejof",
+		"body": "| reject(\"${1|odd,even|}\"",
+		"description": "Filters a sequence of objects by applying a odd or even test to each object, and rejecting the objects with the test succeeding."
+	},
+    "Reject divisibleby Filter": {
+		"prefix": "rejdf",
+		"body": "| reject(\"divisibleby\", ${1:by|}",
+		"description": "Filters a sequence of objects by applying a divisible by test to each object, and rejecting the objects with the test succeeding."
+	},
+    "Rejectattr Filter": {
+		"prefix": "rejattrf",
+		"body": "| rejectattr(${1:attr})",
+		"description": "Filter a sequence of objects by applying a test to the specified attribute of each object, and rejecting the objects with the test succeeding. This is the opposite of selectattr filter. If no test is specified, the attribute’s value will be evaluated as a boolean."
+	},
+
+    "Replace Filter": {
+		"prefix": "repf",
+		"body": "| replace(${1:needle}, ${2:haystack})",
+		"description": "Replace one item with another. The first item is the item to be replaced, the second item is the replaced value."
+	},
+    "Replace occurences Filter": {
+		"prefix": "repof",
+		"body": "| replace(${1:needle}, ${2:haystack}, ${3:occurences})",
+		"description": "Replace N occurences of an item with another. The first item is the item to be replaced, the second item is the replaced value, the last value is the number of occurences to be replaced."
+	},
+
+    "Reverse Filter": {
+		"prefix": "revf",
+		"body": "| reverse",
+		"description": "Reverse a string or an array."
+	},
+
+    "Round Filter": {
+		"prefix": "roundf",
+		"body": "| round(${1:0})",
+		"description": "Round a number to the nearest integer. The first parameter indicate the number of digits to round. You can also specify \"floor\" as a second parameter to force to round to the lowest integer."
+	},
+
+    "Safe Filter": {
+		"prefix": "safef",
+		"body": "| safe",
+		"description": "Mark the value as safe which means that in an environment with automatic escaping enabled this variable will not be escaped."
+	},
+
+    "Select Filter": {
+		"prefix": "rejf",
+		"body": "| select()",
+		"description": "Filters a sequence of objects by applying a test to each object, and selecting the objects with the test succeeding. If no test is specified, each object will be evaluated as a boolean."
+	},
+    "Select odd/even Filter": {
+		"prefix": "rejof",
+		"body": "| select(\"${1|odd,even|}\"",
+		"description": "Filters a sequence of objects by applying a odd or even test to each object, and selecting the objects with the test succeeding."
+	},
+    "Select divisibleby Filter": {
+		"prefix": "seldf",
+		"body": "| select(\"divisibleby\", ${1:by|}",
+		"description": "Filters a sequence of objects by applying a divisible by test to each object, and selecting the objects with the test succeeding."
+	},
+    "Selectattr Filter": {
+		"prefix": "selattrf",
+		"body": "| selectattr(${1:attr})",
+		"description": "Filter a sequence of objects by applying a test to the specified attribute of each object, and rejecting the objects with the test succeeding. This is the opposite of selectattr filter. If no test is specified, the attribute’s value will be evaluated as a boolean."
+	},
+
+    "Slice Filter": {
+		"prefix": "slicef",
+		"body": "| slice(${1:slices})",
+		"description": "Slice an iterator and return a list of lists containing those items."
+	},
+
+    "Sort Filter": {
+		"prefix": "sortf",
+		"body": "| sort(${1:array}, ${2:reverse(false)}, ${3:caseSensitive(false)}, ${4:attr})",
+		"description": "Sort arr with JavaScript's arr.sort function. If reverse is true, result will be reversed. Sort is case-insensitive by default, but setting caseSens to true makes it case-sensitive. If attr is passed, will compare attr from each item."
+	},
+
+    "String Filter": {
+		"prefix": "strf",
+		"body": "| string",
+		"description": "Convert an object to a string."
+	},
+
+    "Striptags Filter": {
+		"prefix": "stripf",
+		"body": "| striptags(${2:preserver_linebreaks (boolean)})",
+		"description": "Analog of jinja's striptags. If preserve_linebreaks is false (default), strips SGML/XML tags and replaces adjacent whitespace with one space. If preserve_linebreaks is true, normalizes whitespace, trying to preserve original linebreaks. Use second behavior if you want to pipe {{ text | striptags(true) | escape | nl2br }}. Use default one otherwise."
+	},
+
+    "Sum Filter": {
+		"prefix": "sumf",
+		"body": "| sum",
+		"description": "Output the sum of items in the array."
+	},
+
+    "Title Filter": {
+		"prefix": "titlef",
+		"body": "| title",
+		"description": "Make the first letter of the string uppercase."
+	},
+
+    "Trim Filter": {
+		"prefix": "trimf",
+		"body": "| trim",
+		"description": "Strip leading and trailing whitespace."
+	},
+
+    "Truncate Filter": {
+		"prefix": "truncf",
+		"body": "| truncate(${1:keep})",
+		"description": "Return a truncated copy of the string. The length is specified with the first parameter which defaults to 255. If the second parameter is true the filter will cut the text at length. Otherwise it will discard the last word. If the text was in fact truncated it will append an ellipsis sign (\"...\"). A different ellipsis sign than \"(...)\" can be specified using the third parameter."
+	},
+    "Truncate replace Filter": {
+		"prefix": "truncrepf",
+		"body": "| truncate(${1:keep}, true, ${2:replace})",
+		"description": "Return a truncated copy of the string. The length is specified with the first parameter which defaults to 255. If the second parameter is true the filter will cut the text at length. Otherwise it will discard the last word. If the text was in fact truncated it will append an ellipsis sign (\"...\"). A different ellipsis sign than \"(...)\" can be specified using the third parameter."
+	},
+
+    "Upper Filter": {
+		"prefix": "upf",
+		"body": "| upper",
+		"description": "Convert the string to upper case."
+	},
+
+    "Urlencode Filter": {
+		"prefix": "urlencf",
+		"body": "| urlencode",
+		"description": "Escape strings for use in URLs, using UTF-8 encoding. Accepts both dictionaries and regular strings as well as pairwise iterables."
+	},
+
+    "Urlize Filter": {
+		"prefix": "urlizef",
+		"body": "| urlize",
+		"description": "Convert URLs in plain text into clickable links."
+	},
+    "Urlize truncate Filter": {
+		"prefix": "urlizetruncf",
+		"body": "| urlize(${1:keep}, true)",
+		"description": "Convert URLs in plain text into clickable links, and truncate the link label."
+	},
+
+    "Wordcount truncate Filter": {
+		"prefix": "wordcountf",
+		"body": "| wordcount",
+		"description": "Count and output the number of words in a string."
+	},
+}

@@ -1,0 +1,25 @@
+{
+    "Inline Comment": {
+		"prefix": "comment",
+		"body": "{# ${1:comment} #}\n",
+		"description": "You can write comments using {# and #}. Comments are completely stripped out when rendering."
+	},
+
+	"Block Comment": {
+		"prefix": "cblock",
+		"body": "{# \n\t${1:comment}\n#}\n",
+		"description": "Comment in block format.."
+	},
+
+    "Display Variable": {
+        "prefix": ["var","show","display"],
+        "body": "{{ ${1:var} }}",
+        "description": "A variable looks up a value from the template context. If you wanted to simply display a variable 'username', you would do: {{ username }}"
+    },
+
+    "Super": {
+        "prefix": "super",
+        "body": "{{ super() }}",
+        "description": "You can render the contents of the parent block inside a child block by calling super."
+    },
+}
