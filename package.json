@@ -1,6 +1,6 @@
 {
     "name": "nunjucks-package-for-vscode",
-    "displayName": "nunjucks-package-for-vscode",
+    "displayName": "Nunjucks templating package for VSCode",
     "description": "A complete suite of snippets to use Nunjucks API",
     "icon": "./images/nunjucks.png",
     "galleryBanner": {
@@ -12,6 +12,7 @@
         "vscode": "^1.80.0"
     },
     "categories": [
+        "Programming Languages",
         "Snippets"
     ],
     "contributes": {
