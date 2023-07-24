@@ -9,7 +9,7 @@ This package aims at providing a complete package to start coding Nunjucks templ
 -------
 
 ### Demo
-![Demo](docs/demo.gif)
+![Demo](./docs/demo.gif)
 
 ### Snippets list
 
@@ -17,10 +17,12 @@ This package aims at providing a complete package to start coding Nunjucks templ
 | Prefix               | HTML Snippet Content                                       |
 | -------------------- | ---------------------------------------------------------- |
 | `comment`            | `{# comment #}`                                            |
-| `cblock`             | `{# \n\tcomment\n #}`                                      |
+| `cblock`             | `{# comment #}`                                            |
 | `var, show, display` | `{{ var }}`                                                |
 | `super`              | `{{ super() }}`                                            |
+
 -------
+
 #### Tags  
 | Prefix               | HTML Snippet Content                                       |
 | -------------------- | ---------------------------------------------------------- |
