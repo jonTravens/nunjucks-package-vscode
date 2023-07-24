@@ -1,9 +1,10 @@
 {
+    "version": "1.0.0",
     "name": "nunjucks-package-for-vscode",
-    "displayName": "Nunjucks templating package for VSCode",
-    "description": "A complete suite of snippets to use Nunjucks API",
+    "displayName": "Nunjucks templating package",
+    "description": "A complete suite of snippets to use Nunjucks templating API",
     "publisher": "jontravens",
-    "icon": "./images/nunjucks.png",
+    "icon": "images/nunjucks.png",
     "homepage": "https://github.com/jontravens/nunjucks-package-vscode.git",
     "repository": {
         "type": "git",
@@ -14,23 +15,27 @@
         "nunjucks",
         "njk",
         "html",
-        "markdown",
         "grammar",
-        "language"
+        "language",
+        "formatter"
     ],
     "galleryBanner": {
         "color": "#203510",
         "theme": "dark"
     },
-    "version": "0.1",
     "engines": {
         "vscode": "^1.80.0"
     },
     
     "categories": [
         "Programming Languages",
-        "Snippets"
+        "Snippets",
+        "Extension Packs"
     ],
+    "extensionPack": [
+        "okitavera.vscode-nunjucks-formatter"
+    ],
+
     "contributes": {
         "languages": [
             {

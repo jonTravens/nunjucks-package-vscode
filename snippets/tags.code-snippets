@@ -13,16 +13,32 @@
 
     "Extends": {
         "prefix": "extends",
-        "body": "{% extends \"${1:template}\" %}$2",
+        "body": "{% extends \"${1:template}\" %}\n$0",
         "description": "Extends is used to specify template inheritance. The specified template is used as a base template."
     },
 
     "Include": {
         "prefix": "include",
-        "body": "{% include \"${1:template}\" ${2:ignore missing} %}$3",
+        "body": "{% include \"${1:template}\" %}\n$0",
+        "description": "Include pulls in other templates in place. It\"s useful when you need to share smaller chunks across several templates that already inherit other templates."
+    },
+    "Include ignore missing": {
+        "prefix": "include_missing",
+        "body": "{% include \"${1:template}\" ignore missing %}\n$0",
         "description": "Include pulls in other templates in place. It\"s useful when you need to share smaller chunks across several templates that already inherit other templates."
     },
 
+    
+    "Import": {
+        "prefix": "import",
+        "body": "{% import \"${1:template}\" as ${2:var} ${3:with context }%}\n$0",
+        "description": "Import loads a different template and allows you to access its exported values. Macros and top-level assignments (done with set) are exported from templates, allowing you to access them in a different template. By adding with context to the end of an import directive, the imported template is processed with the current context."
+    },
+    "Import from": {
+        "prefix": "from",
+        "body": "{% from \"${1:template}\" import ${2:macro} as ${3:var} ${3:with context }%}\n$0",
+        "description": "Import loads a different template and allows you to access its exported values. Macros and top-level assignments (done with set) are exported from templates, allowing you to access them in a different template. By adding with context to the end of an import directive, the imported template is processed with the current context."
+    },
 
     "If": {
         "prefix": "if",
@@ -103,17 +119,6 @@
         "description": "A call block enables you to call a macro with all the text inside the tag. This is helpful if you want to pass a lot of content into a macro. The content is available inside the macro as caller()."
     },
 
-    "Import": {
-        "prefix": "import",
-        "body": "{% import \"${1:template}\" as ${2:var} ${3:with context }%}\n$0",
-        "description": "Import loads a different template and allows you to access its exported values. Macros and top-level assignments (done with set) are exported from templates, allowing you to access them in a different template. By adding with context to the end of an import directive, the imported template is processed with the current context."
-    },
-
-    "Import from": {
-        "prefix": "from",
-        "body": "{% from \"${1:template}\" import ${2:macro} as ${3:var} ${3:with context }%}\n$0",
-        "description": "Import loads a different template and allows you to access its exported values. Macros and top-level assignments (done with set) are exported from templates, allowing you to access them in a different template. By adding with context to the end of an import directive, the imported template is processed with the current context."
-    },
 
     "Raw": {
         "prefix": "raw",

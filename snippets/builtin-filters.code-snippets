@@ -51,6 +51,11 @@
 		"body": "| escape",
 		"description": "Convert the characters &, <, >, ‘, and ” in strings to HTML-safe sequences. Use this if you need to display text that might contain such characters in HTML. Marks return value as markup string."
 	},
+    "Force Escape Filter": {
+		"prefix": "forcescf",
+		"body": "| forceescape",
+		"description": "Enforce HTML escaping. This will probably double escape variables."
+	},
 
     "First Filter": {
 		"prefix": "firstf",
@@ -64,15 +69,9 @@
 		"description": "Convert a value into a floating point number. If the conversion fails 0.0 is returned. This default can be overridden by using the first parameter."
 	},
 
-    "Force Escape Filter": {
-		"prefix": "forcescf",
-		"body": "| forceescape",
-		"description": "Enforce HTML escaping. This will probably double escape variables."
-	},
-
     "GroupeBy Filter": {
 		"prefix": "groupf",
-		"body": "| groupeby",
+		"body": "| groupby",
 		"description": "Group a sequence of objects by a common attribute. Attribute can use dot notation to use nested attribute, like date.year."
 	},
 
@@ -186,12 +185,12 @@
 	},
 
     "Select Filter": {
-		"prefix": "rejf",
+		"prefix": "self",
 		"body": "| select()",
 		"description": "Filters a sequence of objects by applying a test to each object, and selecting the objects with the test succeeding. If no test is specified, each object will be evaluated as a boolean."
 	},
     "Select odd/even Filter": {
-		"prefix": "rejof",
+		"prefix": "selof",
 		"body": "| select(\"${1|odd,even|}\"",
 		"description": "Filters a sequence of objects by applying a odd or even test to each object, and selecting the objects with the test succeeding."
 	},
