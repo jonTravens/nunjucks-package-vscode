@@ -9,7 +9,7 @@ This package aims at providing a complete package to start coding Nunjucks templ
 -------
 
 ### Demo
-![Demo](./docs/demo.gif)
+![Demo](https://github.com/jonTravens/nunjucks-package-vscode/raw/main/docs/demo.gif)
 
 ### Snippets list
 
