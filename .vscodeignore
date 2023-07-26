@@ -3,3 +3,6 @@
 .gitignore
 vsc-extension-quickstart.md
 README_old.md
+*.vsix
+
+docs/*.gif
