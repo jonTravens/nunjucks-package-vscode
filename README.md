@@ -1,19 +1,22 @@
-## Nunjucks complete package for Visual Studio Code
+# Nunjucks complete package for Visual Studio Code
 
 This package aims at providing a complete package to start coding Nunjucks templates in VSCode :  
+
 - Language configuration
 - Syntax definition (forked from [ronnidc's package](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks))
 - Snippets for every features listed in [Nunjucks templating documentation](https://mozilla.github.io/nunjucks/templating.html)
-- Template formatter via [Nanda Okitavera's extension](https://marketplace.visualstudio.com/items?itemName=okitavera.vscode-nunjucks-formatter) which is automatically installed with this extension.   
+- Template formatter via [Nanda Okitavera's extension](https://marketplace.visualstudio.com/items?itemName=okitavera.vscode-nunjucks-formatter) which is automatically installed with this extension.
 
 -------
 
-### Demo
+## Demo
+
 ![Demo](https://github.com/jonTravens/nunjucks-package-vscode/blob/main/docs/demo.gif?raw=true)
 
 ### Snippets list
 
 #### Basics  
+
 | Prefix               | HTML Snippet Content                                       |
 | -------------------- | ---------------------------------------------------------- |
 | `comment`            | `{# comment #}`                                            |
@@ -24,6 +27,7 @@ This package aims at providing a complete package to start coding Nunjucks templ
 -------
 
 #### Tags  
+
 | Prefix               | HTML Snippet Content                                       |
 | -------------------- | ---------------------------------------------------------- |
 | `njk, tag`           | `{% %}`                                                    |
@@ -56,6 +60,7 @@ This package aims at providing a complete package to start coding Nunjucks templ
 -------
 
 #### Global functions  
+
 | Prefix               | HTML Snippet Content                                       |
 | -------------------- | ---------------------------------------------------------- |
 | `rangef`             | `range(start, stop)`                                       |
@@ -66,6 +71,7 @@ This package aims at providing a complete package to start coding Nunjucks templ
 -------
 
 #### Builtin Filters  
+
 | Prefix               | HTML Snippet Content                                       |
 | -------------------- | ---------------------------------------------------------- |
 | `pipe`               | `\| `                                                      |

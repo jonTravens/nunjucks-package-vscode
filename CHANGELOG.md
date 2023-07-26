@@ -1,7 +1,17 @@
 # Change Log
 
-## [1.0.0] - 2023-07-24
-- Initial release
+## [1.0.3] - 2023-07-26
+
+### Removed
+
+- Ignored files while packaging to make it lighter
 
 ## [1.0.2] - 2023-07-24
-- Fixes link to demo gif
+
+### Fixed
+
+- Linked to demo gif
+
+## [1.0.0] - 2023-07-24
+
+- Initial release
