@@ -1,5 +1,5 @@
 {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "name": "nunjucks-package-for-vscode",
     "displayName": "Nunjucks templating package",
     "description": "A complete suite of snippets to use Nunjucks templating API",
