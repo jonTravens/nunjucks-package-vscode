@@ -67,7 +67,7 @@
     },
     "Else": {
         "prefix": "else",
-        "body": "{% else ${1:condition} %}\n\t$2\n{% endif %}\n$0",
+        "body": "{% else %}\n\t$0",
         "description": "Adds an else in the if block"
     },
     "End": {
