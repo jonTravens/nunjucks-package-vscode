@@ -1,5 +1,5 @@
 {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "name": "nunjucks-package-for-vscode",
     "displayName": "Nunjucks templating package",
     "description": "A complete suite of snippets and extensions to use Nunjucks templating API.",
@@ -26,7 +26,6 @@
     "engines": {
         "vscode": "^1.80.0"
     },
-    
     "categories": [
         "Programming Languages",
         "Snippets",
@@ -35,7 +34,6 @@
     "extensionPack": [
         "okitavera.vscode-nunjucks-formatter"
     ],
-
     "contributes": {
         "languages": [
             {
