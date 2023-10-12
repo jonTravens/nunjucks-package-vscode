@@ -2,7 +2,7 @@
     "version": "1.0.3",
     "name": "nunjucks-package-for-vscode",
     "displayName": "Nunjucks templating package",
-    "description": "A complete suite of snippets to use Nunjucks templating API",
+    "description": "A complete suite of snippets and extensions to use Nunjucks templating API.",
     "publisher": "jontravens",
     "icon": "images/nunjucks.png",
     "homepage": "https://github.com/jontravens/nunjucks-package-vscode.git",
